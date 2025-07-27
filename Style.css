@@ -1,0 +1,329 @@
+/* style.css */
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* En-tête (Header) */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff8c00; /* Orange vif */
+}
+
+/* Boutons */
+.button {
+    display: inline-block;
+    background-color: #007bff; /* Bleu standard */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Bleu plus foncé */
+}
+
+.button.primary {
+    background-color: #ff8c00; /* Orange vif pour le bouton d'achat */
+}
+
+.button.primary:hover {
+    background-color: #cc7000; /* Orange plus foncé */
+}
+
+/* Section Héro (Accueil) */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e2e2e2;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Liste des livres */
+.books-list {
+    display: flex; /* Utilise flexbox pour organiser les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+    justify-content: center; /* Centre les cartes */
+    gap: 20px; /* Espace entre les cartes */
+    padding: 20px;
+}
+
+.book-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px; /* Largeur fixe pour chaque carte */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pour que les boutons soient en bas */
+}
+
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.book-card p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.book-card .button {
+    width: calc(100% - 20px); /* Ajuste la largeur des boutons dans la carte */
+    margin: 5px auto;
+}
+
+/* Détails du livre */
+.book-details {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.detail-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Pour la réactivité sur petits écrans */
+}
+
+.detail-content img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.detail-content div {
+    flex: 1; /* Permet au texte de prendre l'espace restant */
+}
+
+.detail-content h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.detail-content p {
+    margin-bottom: 10px;
+}
+
+/* Section paiement */
+.payment-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.payment-section h2 {
+    color: #ff8c00;
+    margin-bottom: 20px;
+}
+
+.payment-section .payment-link a {
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.payment-section .payment-link a:hover {
+    color: #0056b3;
+}
+
+/* Pied de page (Footer) */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .detail-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-content img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .book-card {
+        width: 100%; /* Les cartes prennent toute la largeur sur petits écrans */
+    }
+}
+
+/* Styles pour la page de paiement améliorée */
+.payment-instructions {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 20px;
+    text-align: left; /* Aligne le texte à gauche à l'intérieur de ce bloc */
+}
+
+.payment-instructions h3 {
+    color: #ff8c00; /* La couleur Orange Money */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.payment-instructions p {
+    margin-bottom: 10px;
+}
+
+.payment-instructions ul {
+    list-style: none; /* Enlève les puces par défaut */
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.payment-instructions ul li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.payment-instructions ul li strong {
+    color: #007bff; /* Couleur bleue pour les titres de contact */
+}
+
+.phone-number {
+    font-size: 1.8rem; /* Plus grand pour le numéro de téléphone */
+    font-weight: bold;
+    color: #008000; /* Une couleur verte pour le numéro */
+    background-color: #e6ffe6;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block; /* Pour que le background ne prenne pas toute la largeur */
+    margin: 15px 0;
+}
+
+/* Styles pour le livre sélectionné sur la page de paiement */
+.selected-book-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #eaf7ff; /* Bleu très clair */
+    border: 1px solid #cceeff; /* Bordure plus douce */
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.selected-book-info img {
+    width: 80px; /* Taille fixe pour l'image du livre */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover; /* S'assure que l'image couvre bien la zone */
+}
+
+.selected-book-info h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.selected-book-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .selected-book-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
